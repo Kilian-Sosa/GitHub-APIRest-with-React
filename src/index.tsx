@@ -13,7 +13,6 @@ root.render(
   <React.StrictMode>
     <Menu />
     <Profile />
-    <App />
   </React.StrictMode>
 );
 
