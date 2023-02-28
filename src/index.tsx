@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Menu from './components/Menu';
 import reportWebVitals from './reportWebVitals';
+import Profile from './components/Profile';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Menu />
+    <Profile />
     <App />
   </React.StrictMode>
 );
