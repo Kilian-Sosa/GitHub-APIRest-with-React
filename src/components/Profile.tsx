@@ -76,7 +76,7 @@ function Profile() {
         <div className="col-3 card align-items-center">
           <img src="https://picsum.photos/300/300" alt="User Avatar" id="imagen" className="col-12" />
           <p className="fs-4 card-title">{Object.keys(data).length > 0 ? (<a href={data["html_url"] + ""} target="_blank">{data["login"] + ""}</a>) : null}</p>
-          <p className="fs-6 card-title">{bio}</p>
+          <p className="fs-6 card-title px-3">{bio}</p>
           {Object.keys(data).length > 0 ? (<button type="button" className="btn btn-info col-8 text-white mb-2" onClick={reposHandler}>Mostrar Repositorios</button>) : null}
         </div>
         {Object.keys(data).length > 0 ? (
@@ -88,11 +88,11 @@ function Profile() {
               <span className="bg-warning mx-1 col-2 rounded px-1">{data["following"] + ""} Seguidos</span>
             </div>
             <ul className="list-group">
-              <li className="list-group-item"><strong>Name: </strong>{name}</li>
-              <li className="list-group-item"><strong>Location: </strong>{location}</li>
-              <li className="list-group-item"><strong>Email: </strong>{email}</li>
-              <li className="list-group-item"><strong>WebPage: </strong>{data["blog"] + ""}</li>
-              <li className="list-group-item"><strong>Member Since: </strong>{data["created_at"] + ""}</li>
+              <li className="list-group-item"><strong>Nombre: </strong>{name}</li>
+              <li className="list-group-item"><strong>Localización: </strong>{location}</li>
+              <li className="list-group-item"><strong>Correo Electrónico: </strong>{email}</li>
+              <li className="list-group-item"><strong>Página Web: </strong>{data["blog"] + ""}</li>
+              <li className="list-group-item"><strong>Se unió en: </strong>{data["created_at"] + ""}</li>
             </ul>
         </div>
         ) : null}
@@ -109,8 +109,8 @@ function Profile() {
                       <h5><a href={repo.html_url} target="_blank">{repo.name}</a></h5>
                     </div>
                     <ul className="list-group col-5 d-flex text-white flex-row justify-content-end align-items-center">
-                      <span className="bg-primary mx-1 col-5 px-1 rounded text-white">{repo.watchers} Visualizaciones</span>
-                      <span className="bg-success mx-1 col-3 px-1 rounded text-white">{repo.forks} Forks</span>
+                      <span className="bg-primary mx-1 col-5 px-1 rounded text-white">{repo.watchers} Views</span>
+                      <span className="bg-success mx-1 col-4 px-1 rounded text-white">{repo.forks} Forks</span>
                     </ul>
                   </div>
                   <div className="row">
