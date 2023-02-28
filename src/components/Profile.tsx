@@ -1,6 +1,7 @@
-import React, { useState, ChangeEvent, MouseEventHandler } from "react";
+import React, { useState, ChangeEvent, MouseEventHandler, useEffect } from "react";
 import '../App.css';
 import options from '../token.js';
+import axios from 'axios';
 
 interface Repo {
   html_url: string,
@@ -49,6 +50,8 @@ function Profile() {
       console.log(err);
     }
   }
+
+
 
   const reposHandler: MouseEventHandler<HTMLButtonElement> = async e=>{
     e.preventDefault();
